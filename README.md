@@ -6,12 +6,23 @@ world map. This repository holds its **releases** - the app and the feed it upda
 
 ## Install
 
-On a Mac with macOS 14 or later:
+On a Mac with Apple silicon and macOS 14 or later, paste this into Terminal:
 
-1. Install OpenVPN, the engine MyVPN uses: `brew install openvpn`
+```bash
+curl -fsSL https://github.com/manu-tech-code/myvpn-releases/releases/latest/download/install.sh | bash
+```
+
+It installs OpenVPN (the engine MyVPN uses) with Homebrew if it's missing, puts MyVPN in Applications and opens it.
+MyVPN then asks for your Mac password once, to install the helper that creates the tunnel. Running the command again
+updates MyVPN to the latest version.
+
+### Or with the disk image
+
+1. Install OpenVPN: `brew install openvpn`
 2. Download `MyVPN-<version>.dmg` from [Releases](https://github.com/manu-tech-code/myvpn-releases/releases) and drag
    MyVPN to Applications.
-3. The app isn't notarized, so the first time, right-click MyVPN and choose **Open**.
+3. MyVPN isn't notarized, so macOS won't open it the first time. Open **System Settings › Privacy & Security** and
+   click **Open Anyway** next to MyVPN.
 4. MyVPN asks for your Mac password once, to install the helper that creates the tunnel.
 
 ## Updates
